@@ -5,6 +5,7 @@
     "start": "solid-start start --port 3000",
     "build": "solid-start build",
     "lint": "eslint --fix \"**/*.{ts,tsx,js,jsx}\"",
+    "prettier": "prettier --write .",
     "push": "prisma db push",
     "postinstall": "prisma generate"
   },
