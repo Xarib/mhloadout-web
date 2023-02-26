@@ -12,8 +12,10 @@ specifiers:
   '@typescript-eslint/parser': ^5.52.0
   autoprefixer: ^10.4.13
   eslint: ^8.34.0
+  eslint-config-prettier: ^8.6.0
   eslint-plugin-solid: ^0.9.4
   postcss: ^8.4.21
+  prettier: 2.8.4
   prisma: ^4.10.1
   solid-js: ^1.6.11
   solid-start: ^0.2.21
@@ -42,8 +44,10 @@ devDependencies:
   '@typescript-eslint/parser': 5.53.0_ycpbpc6yetojsgtrx3mwntkhsu
   autoprefixer: 10.4.13_postcss@8.4.21
   eslint: 8.35.0
+  eslint-config-prettier: 8.6.0_eslint@8.35.0
   eslint-plugin-solid: 0.9.4_ycpbpc6yetojsgtrx3mwntkhsu
   postcss: 8.4.21
+  prettier: 2.8.4
   prisma: 4.10.1
   solid-start-node: 0.2.22_ppwjshleycygoco43sslduznmy
   tailwindcss: 3.2.7_postcss@8.4.21
@@ -2534,6 +2538,15 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /eslint-config-prettier/8.6.0_eslint@8.35.0:
+    resolution: {integrity: sha512-bAF0eLpLVqP5oEVUFKpMA+NnRFICwn9X8B5jrR9FcqnYBuPbqWEjTEspPWMj5ye6czoSLDweCzSo3Ko7gGrZaA==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.35.0
+    dev: true
+
   /eslint-plugin-solid/0.9.4_ycpbpc6yetojsgtrx3mwntkhsu:
     resolution: {integrity: sha512-AGS7XnkepV2jiFwBMSg3FW7GKe6uJwgx65nnRC7I6s0dbV7rGpouwj9KDkXV5NJHQENxACeOLUTgjyMi3JeHNw==}
     engines: {node: '>=12.0.0'}
@@ -3596,6 +3609,12 @@ packages:
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier/2.8.4:
+    resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /pretty-format/3.8.0:
