@@ -12,3 +12,6 @@ netlify
 .classpath
 *.launch
 .settings/
+
+package.json
+pnpm-lock.yaml
