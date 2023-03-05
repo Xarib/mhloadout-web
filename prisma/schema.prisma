@@ -40,7 +40,6 @@ model Talisman {
 
   MirroredLoadout  MirroredLoadout[]
   PublishedLoadout PublishedLoadout[]
-  Skill            Skill[]
   TalismanToSkill  TalismanToSkill[]
 }
 
@@ -67,7 +66,8 @@ model Decoration {
 
 model DecorationToSkill {
   id         String @id @default(cuid())
-  skillLevel Int
+  // nullable for rampage decos
+  skillLevel Int?
 
   decoration   Decoration @relation(fields: [decorationId], references: [id])
   decorationId Int
@@ -76,10 +76,8 @@ model DecorationToSkill {
 }
 
 model Skill {
-  id         Int       @id @default(autoincrement())
-  name       String
-  Talisman   Talisman? @relation(fields: [talismanId], references: [id])
-  talismanId Int?
+  id   Int    @id @default(autoincrement())
+  name String
 
   TalismanToSkill   TalismanToSkill[]
   DecorationToSkill DecorationToSkill[]
