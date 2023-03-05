@@ -35,8 +35,8 @@ model GameData {
 }
 
 model Talisman {
-  id        Int   @id @default(autoincrement())
-  slotSizes Int[]
+  id        Int        @id @default(autoincrement())
+  slotSizes SlotSize[]
 
   MirroredLoadout  MirroredLoadout[]
   PublishedLoadout PublishedLoadout[]
@@ -54,10 +54,10 @@ model TalismanToSkill {
 }
 
 model Decoration {
-  id       Int    @id
+  id       Int      @id
   name     String
   rarity   Int
-  slotSize Int
+  slotSize SlotSize
 
   MirroredSlotting  MirroredSlotting[]
   PublishedSlotting PublishedSlotting[]
@@ -115,10 +115,10 @@ model MirroredLoadout {
 }
 
 model PublishedLoadout {
-  id               Int      @id @default(autoincrement())
-  title            String
-  description      String
-  publishTimestamp DateTime
+  id                   Int      @id @default(autoincrement())
+  title                String
+  description          String
+  publicationTimestamp DateTime
 
   user         User      @relation(fields: [userId], references: [id])
   userId       String
@@ -164,6 +164,13 @@ model PublishedSlotting {
   gearId             Int
   decoration         Decoration       @relation(fields: [decorationId], references: [id])
   decorationId       Int
+}
+
+enum SlotSize {
+  ONE
+  TWO
+  THREE
+  FOUR
 }
 
 // ----------------   Table for auth below   ----------------
