@@ -1,4 +1,5 @@
-import { children, JSX } from "solid-js";
+import type { JSX } from "solid-js";
+import { children } from "solid-js";
 import type { ButtonProps } from "./shared";
 import { BUTTON_STYLES } from "./shared";
 

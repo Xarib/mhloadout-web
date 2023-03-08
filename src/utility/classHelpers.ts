@@ -1,4 +1,4 @@
-export function classJoin(
+export function classJoins(
   ...classes: Array<string | null | undefined>
 ): string {
   return classes
