@@ -30,10 +30,12 @@
   "dependencies": {
     "@auth/core": "^0.4.0",
     "@auth/solid-start": "^0.1.1",
+    "@floating-ui/dom": "^1.2.3",
     "@next-auth/prisma-adapter": "^1.0.5",
     "@prisma/client": "^4.11.0",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.7.0",
+    "solid-floating-ui": "^0.2.1",
     "solid-js": "^1.6.11",
     "solid-start": "^0.2.22",
     "undici": "5.20.0",

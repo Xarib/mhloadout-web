@@ -1,7 +1,7 @@
 // @refresh reload
 import "./root.css";
 import "./fonts.css";
-import { Show, Suspense } from "solid-js";
+import { Suspense } from "solid-js";
 import {
   Body,
   ErrorBoundary,
@@ -14,7 +14,6 @@ import {
   Title,
   Link,
 } from "solid-start";
-import { serverEnv } from "~/env/server";
 
 export default function Root() {
   return (
@@ -27,9 +26,7 @@ export default function Root() {
         <Link rel="icon" href="/favicon.ico" />
       </Head>
       <Body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-50">
-        <Show when={serverEnv.NODE_ENV == "development"}>
-          <div class="border-t-4 border-t-red-600 md:border-t-orange-500 lg:border-t-amber-400 xl:border-t-green-400 2xl:border-t-cyan-300" />
-        </Show>
+        <div class="border-t-4 border-t-red-600 md:border-t-orange-500 lg:border-t-amber-400 xl:border-t-green-400 2xl:border-t-cyan-300" />
         <Suspense>
           <ErrorBoundary>
             <Routes>
