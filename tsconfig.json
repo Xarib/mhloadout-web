@@ -13,7 +13,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "jsx": "preserve",
-    "types": ["solid-start/env", "./auth"],
+    "types": ["solid-start/env", "./auth", "unplugin-icons/types/solid"],
     "baseUrl": "./",
     "paths": {
       "~/*": ["./src/*"]
