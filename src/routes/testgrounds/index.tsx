@@ -10,6 +10,7 @@ const Testgrounds: VoidComponent = () => {
         <AnchorButton href="../">Index</AnchorButton>
         <AnchorButton href="buttons">Buttons</AnchorButton>
         <AnchorButton href="icon-buttons">Icon-Buttons</AnchorButton>
+        <AnchorButton href="decorators">Decorators</AnchorButton>
       </WidthConstraint>
     </main>
   );
