@@ -4,15 +4,12 @@ import { children } from "solid-js";
 const WidthConstraint = (props: Props) => {
   const c = children(() => props.children);
 
-  return (
-    <div class="flex justify-center p-4">
-      <div class="max-w-3xl">{c()}</div>
-    </div>
-  );
+  return <div class={`px-4 xl:px-24 2xl:px-64 ${props.class}`}>{c()}</div>;
 };
 
 interface Props {
   children?: JSXElement;
+  class?: string;
 }
 
 export default WidthConstraint;

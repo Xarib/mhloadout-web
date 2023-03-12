@@ -60,7 +60,7 @@ function Decorator(props: DecoratorProps) {
 
 export default Decorator;
 
-interface DecoratorProps {
+export interface DecoratorProps {
   class?: string;
   inline?: boolean;
   top?: JSXElement;
