@@ -10,12 +10,13 @@ export function AnchorIconButton(props: AnchorProps & IconButtonProps) {
   const c = children(() => props.children);
   const [isOver, setIsOver] = createSignal(false);
 
+  // The "&#xfeff" is the worlds ugliest workaround. Somehow the props.hoverTitle in the Tag is stripped away on build. It shows up again on HMR or if you click on the icon button
   return (
     <Decorator
       inline
       bottom={
         <Show when={props.hoverTitle != null}>
-          <Tag>{props.hoverTitle}</Tag>
+          <Tag>{props.hoverTitle}&#xfeff</Tag>
         </Show>
       }
       configBottom={{
