@@ -1,0 +1,23 @@
+@supports (font-variation-settings: "wght" 456) {
+  @font-face {
+    font-family: "nunito";
+    font-weight: 200 1000;
+    font-style: normal;
+    src: url("/fonts/woff2/variable/Nunito-VariableFont_wght.woff2")
+        format("woff2-variations"),
+      url("/fonts/ttf/variable/Nunito-VariableFont_wght.ttf")
+        format("truetype-variations");
+  }
+  @font-face {
+    font-family: "nunito";
+    font-weight: 200 1000;
+    font-style: italic;
+    src: url("/fonts/woff2/variable/Nunito-VariableFont_wght.woff2")
+        format("woff2-variations"),
+      url("/fonts/ttf/variable/Nunito-VariableFont_wght.ttf")
+        format("truetype-variations");
+  }
+}
+* {
+  font-family: "nunito";
+}
