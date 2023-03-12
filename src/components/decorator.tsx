@@ -112,9 +112,8 @@ interface DecorationProps {
 
 function GridDecoration(props: GridDecorationProps) {
   const c = children(() => props.children);
-  // eslint-disable-next-line solid/reactivity
-  const placement = getPlacement(props.location, props.config?.alignment);
-  return <div class={`${PLACEMENT[placement]}`}>{c()}</div>;
+  const placement = () => getPlacement(props.location, props.config?.alignment);
+  return <div class={`${PLACEMENT[placement()]}`}>{c()}</div>;
 }
 
 const PLACEMENT: Record<DecorationPlacement, string> = {

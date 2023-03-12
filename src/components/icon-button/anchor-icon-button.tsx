@@ -8,7 +8,6 @@ import { ICON_BUTTON_STYLE } from "./shared";
 
 export function AnchorIconButton(props: AnchorProps & IconButtonProps) {
   const c = children(() => props.children);
-  const hoverTitle = children(() => props.hoverTitle);
   const [isOver, setIsOver] = createSignal(false);
 
   return (
@@ -16,7 +15,7 @@ export function AnchorIconButton(props: AnchorProps & IconButtonProps) {
       inline
       bottom={
         <Show when={props.hoverTitle != null}>
-          <Tag>{hoverTitle()}</Tag>
+          <Tag>{props.hoverTitle}</Tag>
         </Show>
       }
       configBottom={{

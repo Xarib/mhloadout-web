@@ -9,7 +9,6 @@ function IconButton(
   props: IconButtonProps & JSX.ButtonHTMLAttributes<HTMLButtonElement>
 ) {
   const c = children(() => props.children);
-  const hoverTitle = children(() => props.hoverTitle);
 
   const [isOver, setIsOver] = createSignal(false);
   const show = () => isOver() && props.hoverTitle != null;
@@ -19,7 +18,7 @@ function IconButton(
       inline
       bottom={
         <Show when={props.hoverTitle != null}>
-          <Tag>{hoverTitle()}</Tag>
+          <Tag>{props.hoverTitle}</Tag>
         </Show>
       }
       configBottom={{

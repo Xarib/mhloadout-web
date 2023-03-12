@@ -11,3 +11,5 @@ export function setTheme(dark: boolean) {
 export function userPrefersDark(): boolean {
   return window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
+
+export type Theme = "browser" | "light" | "dark";
